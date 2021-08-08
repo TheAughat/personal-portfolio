@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;500&display=swap');
+
+/* @font-face {
+    font-family: 'neuropolitical';
+    src: url('neuropolitical-rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'neuropolitical'; */
+    font-family: 'Orbitron';
+    /* font-family: 'Audiowide'; */
+}
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.7;
+}
+h2 {
+    color: #426696;
+    /* font-weight: 600; */
+    /* font-size: 3rem; */
+    opacity: 0.5;
+}
+h3, p {
+    color: #314c6e;
+    opacity: 0.7;
+}
+
+.link a h2 {
+    transition: 0.5s;
+}
+
+.link:not(.btn-highlighted) a h2:hover {
+    color: blue;
+    text-shadow: 0 0 10px rgb(0, 102, 255),
+                 0 0 20px rgb(0, 102, 255),
+                 0 0 40px rgb(0, 102, 255),
+                 0 0 80px rgb(0, 102, 255),
+                 0 0 120px rgb(0, 102, 255),
+                 0 0 160px rgb(0, 102, 255);
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to left top, #0fffd3, #09dafa);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60vw;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(1.5rem);
+    display: flex;
+    overflow: hidden;
+    /* overflow-x: scroll; */
+}
+
+.circle1, .circle2 {
+    background: white;
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+}
+
+.circle1 {
+    background: linear-gradient(to right bottom, rgba(15, 159, 255, 0.9), rgba(255, 255, 255, 0.4));
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    background: linear-gradient(to right bottom, rgba(19, 252, 232, 0.9), rgba(255, 255, 255, 0.4));
+    bottom: 5%;
+    left: 10%;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    transition: 1s;
+}
+
+.zero-width {
+    transition: 1s;
+    max-width: 0px;
+}
+
+.link {
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+}
+
+.content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
+    /* justify-content: center; */
+}
+
+.content h1 {
+    text-align: left;
+    padding-top: 4%;
+    padding-left: 8%;
+    pointer-events: none;
+}
+
+.content h3:not(.project-card-content h3) {
+    padding-left: 6%;
+    padding-top: 1%;
+    line-height: 35px;
+    pointer-events: none;
+}
+
+.content .slider {
+    /* position: relative; */
+    margin-left: 4%;
+    margin-top: 5%;
+    /* overflow: none; */
+    /* max-width: 80%; */
+}
+
+.content div.card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.content div.card .card-content {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.content div.card .card-content h2 {
+    font-size: 1.8em;
+    padding-bottom: 40px;
+    color: #fff;
+}
+
+.content div.card .card-content img {
+    width: 100px;
+    padding-bottom: 30%;
+    opacity: 0.6;
+}
+
+.content div.card .card-content a, .readmore {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.content div.card .card-content a:hover, .readmore:hover {
+    color: black;
+}
+
+.readmore {
+    margin-left: 40%;
+    margin-top: 8%;
+}
+
+.cards {
+    height: 65vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    /* flex-direction: row; */
+}
+/* div.sub-content .card {
+    display: flex;
+    flex-direction: row;
+} */
+
+.power {
+    height: 40px;
+    width: 40px;
+    opacity: 0.3;
+    justify-self: right;
+}
+
+.power:hover {
+    opacity: 0.6;
+}
+
+.power:active {
+    opacity: 1;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: black;
+    /* padding: 10px; */
+    /* padding-bottom: 12px; */
+}
+
+/* .about-btn {
+
+} */
+
+.btn-highlighted {
+    background: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4, 
+                0 0 50px #03e9f4, 
+                0 0 200px #03e9f4;
+}
+.btn-highlighted a h2 {
+    color: blue;
+}
+
+.cv-container {
+    /* padding: 20px; */
+    margin-top: 15px;
+    margin-left: 25px;
+    border-radius: 9%;
+    opacity: 0.6;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.all-projects-view {
+    /* height: 650px; */
+    height: 65vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 5%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.project-card {
+    display: flex;
+    align-items: top;
+    margin-right: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-radius: 8%;
+}
+
+.project-card:not(.project-card:first-child) {
+    margin-top: 20px;
+}
+
+.project-card h1 {
+    font-size: 3em;
+}
+
+.project-card h2 {
+    margin-bottom: 7px;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    flex: 1;
+}
+
+.project-card-content .readmore {
+    margin-top: 3%;
+    margin-left: 0%;
+    max-width: 200px;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25%;
+    box-shadow:inset 0 0 2.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #06dee1, rgba(72, 121, 255, 0.4));
+    border-radius: 25%;
+}
