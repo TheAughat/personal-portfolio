@@ -21,6 +21,9 @@ function ready() {
 
     var powerBtn = document.getElementsByClassName('power')[0]
     powerBtn.addEventListener('click', powerSwitch)
+
+    var dpBtn = document.getElementsByClassName('dp')[0]
+    dpBtn.addEventListener('click', dpClicked)
 }
 
 
@@ -170,9 +173,8 @@ function runVanillaTilt() {
 
 
 var cvSection = `
-<div>
-    <embed src='Latest CV.pdf' type='application/pdf' width='99%' height='610px' class='cv-container'/>
-</div>`
+<embed src='Latest CV.pdf' type='application/pdf' class='cv-container'/>
+<button class='refs-btn readmore'>References</button>`
 function cvClicked(event) {
     console.log('resume clicked!')
     clearContentPane()
@@ -190,32 +192,113 @@ function cvClicked(event) {
 }
 
 
+var drBtn = `
+<button class='maximize-dash-btn'>&gt;&gt;</button>
+`
+var noMaxiBtn = ``
+function dpClicked(event) {
+    document.getElementsByClassName('dashboard')[0].classList.remove('dash-change-4')
+    document.getElementsByClassName('user')[0].classList.remove('dash-change-3')
+    document.getElementsByClassName('links')[0].classList.remove('dash-change-3')
+
+    noMaxiBtn = `\n` + document.getElementsByClassName('dashboard')[0].innerHTML
+
+    document.getElementsByClassName('user')[0].classList.add('dash-change-1')
+    document.getElementsByClassName('links')[0].classList.add('dash-change-1')
+    console.log('profile picture clicked!')
+
+    document.getElementsByClassName('sub-content')[0].classList.remove('powered-on')
+    document.getElementsByClassName('sub-content')[1].classList.remove('powered-on')
+    document.getElementsByClassName('dashboard')[0].classList.remove('powered-on')
+    // var dashPane = document.getElementsByClassName('user')
+    // lenDashPane = dashPane.length
+    // for (var i=0; i<lenDashPane; i++) {
+    //     console.log(dashPane[0])
+    //     dashPane[0].remove()
+    // }
+    // var dashPane = document.getElementsByClassName('links')
+    // lenDashPane = dashPane.length
+    // for (var i=0; i<lenDashPane; i++) {
+    //     console.log(dashPane[0])
+    //     dashPane[0].remove()
+    // }
+    document.getElementsByClassName('dashboard')[0].classList.remove('dash-change-4')
+    document.getElementsByClassName('dashboard')[0].classList.add('dash-change')
+
+    document.getElementsByClassName('dashboard')[0].innerHTML = document.getElementsByClassName('dashboard')[0].innerHTML + drBtn
+
+    var maximizeBtn = document.getElementsByClassName('maximize-dash-btn')[0]
+    maximizeBtn.addEventListener('click', maximizeDash)
+}
+
+
+function maximizeDash(event) {
+    console.log('This works!')
+    document.getElementsByClassName('user')[0].classList.remove('dash-change-1')
+    document.getElementsByClassName('links')[0].classList.remove('dash-change-1')
+    document.getElementsByClassName('dashboard')[0].classList.remove('dash-change')
+    document.getElementsByClassName('dashboard')[0].innerHTML = noMaxiBtn
+
+    document.getElementsByClassName('user')[0].classList.add('dash-change-3')
+    document.getElementsByClassName('links')[0].classList.add('dash-change-3')
+    document.getElementsByClassName('dashboard')[0].classList.add('dash-change-4')
+
+    ready()
+}
+
+
+// var powerMode = true
+// function powerSwitch() {
+//     if (powerMode) {
+//         console.log('power off')
+//         recordWhereabouts()
+//         console.log(userScript)
+//         document.getElementsByClassName('sub-content')[0].remove()
+//         document.getElementsByClassName('sub-content')[0].remove()
+//         document.getElementsByClassName('user')[0].remove()
+//         document.getElementsByClassName('links')[0].remove()
+//         document.getElementsByClassName('dashboard')[0].classList.add('zero-width')
+//         powerMode = false
+//     }
+//     else {
+//         console.log('power on')
+//         // console.log(contentScript2)
+//         document.getElementsByClassName('dashboard')[0].classList.remove('zero-width')
+//         document.getElementsByClassName('content')[0].innerHTML = contentScript
+//         document.getElementsByClassName('dashboard')[0].innerHTML = dashScript
+//         ready()
+//         runVanillaTilt()
+//         // aboutBtn.addEventListener('click', aboutClicked)
+//         // projectsBtn.addEventListener('click', projectsClicked)
+//         // contactBtn.addEventListener('click', contactClicked)
+//         // cvBtn.addEventListener('click', cvClicked)
+//         // powerBtn.addEventListener('click', powerSwitch)
+//         powerMode = true
+//     }
+// }
+
 var powerMode = true
 function powerSwitch() {
     if (powerMode) {
-        console.log('power off')
-        recordWhereabouts()
-        console.log(userScript)
-        document.getElementsByClassName('sub-content')[0].remove()
-        document.getElementsByClassName('sub-content')[0].remove()
-        document.getElementsByClassName('user')[0].remove()
-        document.getElementsByClassName('links')[0].remove()
-        document.getElementsByClassName('dashboard')[0].classList.add('zero-width')
+        console.log('power-off')
+        document.getElementsByClassName('sub-content')[0].classList.remove('powered-on')
+        document.getElementsByClassName('sub-content')[1].classList.remove('powered-on')
+        document.getElementsByClassName('dashboard')[0].classList.remove('powered-on')
+
+        document.getElementsByClassName('sub-content')[0].classList.add('powered-off')
+        document.getElementsByClassName('sub-content')[1].classList.add('powered-off')
+        document.getElementsByClassName('dashboard')[0].classList.add('powered-off')
         powerMode = false
     }
     else {
         console.log('power on')
-        // console.log(contentScript2)
-        document.getElementsByClassName('dashboard')[0].classList.remove('zero-width')
-        document.getElementsByClassName('content')[0].innerHTML = contentScript
-        document.getElementsByClassName('dashboard')[0].innerHTML = dashScript
-        ready()
-        runVanillaTilt()
-        // aboutBtn.addEventListener('click', aboutClicked)
-        // projectsBtn.addEventListener('click', projectsClicked)
-        // contactBtn.addEventListener('click', contactClicked)
-        // cvBtn.addEventListener('click', cvClicked)
-        // powerBtn.addEventListener('click', powerSwitch)
+        document.getElementsByClassName('sub-content')[0].classList.remove('powered-off')
+        document.getElementsByClassName('sub-content')[1].classList.remove('powered-off')
+        document.getElementsByClassName('dashboard')[0].classList.remove('powered-off')
+
+        document.getElementsByClassName('sub-content')[0].classList.add('powered-on')
+        document.getElementsByClassName('sub-content')[1].classList.add('powered-on')
+        document.getElementsByClassName('dashboard')[0].classList.add('powered-on')
         powerMode = true
     }
 }
