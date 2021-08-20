@@ -237,6 +237,9 @@ function maximizeDash(event) {
     document.getElementsByClassName('user')[0].classList.remove('dash-change-1')
     document.getElementsByClassName('links')[0].classList.remove('dash-change-1')
     document.getElementsByClassName('dashboard')[0].classList.remove('dash-change')
+    document
+      .getElementsByClassName("dashboard")[0]
+      .classList.remove("powered-on");
     document.getElementsByClassName('dashboard')[0].innerHTML = noMaxiBtn
 
     document.getElementsByClassName('user')[0].classList.add('dash-change-3')
