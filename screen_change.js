@@ -177,6 +177,7 @@ var cvSection = `
 <button class='refs-btn readmore'>References</button>`
 function cvClicked(event) {
     console.log('resume clicked!')
+
     clearContentPane()
     var newContentPane = `
     <div class='sub-content cv-title'>
@@ -435,6 +436,8 @@ var allRefs = `
     </div>
 </div>
 `
+var refsSection = `
+`
 function refsClicked(event) {
     clearContentPane()
     var newContentPane = `
@@ -450,8 +453,32 @@ function refsClicked(event) {
 
     document.getElementsByClassName('refs-back-btn')[0].addEventListener('click', cvClicked)
 
-    cvSection = `
-    <embed src='icis_reference.pdf' type='application/pdf' class='cv-container'/>
-    <button class='refs-btn readmore'>References</button>`
-    document.getElementsByClassName('ref-view')[0].addEventListener('click', cvClicked)
+    var refN = 0
+
+    if (refN == 0) {
+        refsSection = `
+        <embed src='icis_reference.pdf' type='application/pdf' class='cv-container'/>
+        <button class='refs-btn readmore'>References</button>`
+    }
+    document.getElementsByClassName('ref-view')[refN].addEventListener('click', singleRefClicked)
+}
+
+function singleRefClicked(event) {
+    console.log('resume clicked!')
+
+    clearContentPane()
+    var newContentPane = `
+    <div class='sub-content cv-title'>
+        <h1>Resume</h1>
+    </div>
+    <div class='sub-content cv-content'>
+        ${refsSection}
+    </div>`
+    var contentPane = document.getElementsByClassName('content')[0]
+    contentPane.innerHTML = newContentPane
+    // var projectsElement = event.target
+    // projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
+    document.getElementsByClassName('cv-btn')[0].parentElement.classList.add('btn-highlighted')
+
+    document.getElementsByClassName('refs-btn')[0].addEventListener('click', refsClicked)
 }
