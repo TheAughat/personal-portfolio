@@ -187,13 +187,16 @@ function cvClicked(event) {
     </div>`
     var contentPane = document.getElementsByClassName('content')[0]
     contentPane.innerHTML = newContentPane
-    var projectsElement = event.target
-    projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
+    // var projectsElement = event.target
+    // projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
+    document.getElementsByClassName('cv-btn')[0].parentElement.classList.add('btn-highlighted')
+
+    document.getElementsByClassName('refs-btn')[0].addEventListener('click', refsClicked)
 }
 
 
 var drBtn = `
-<button class='maximize-dash-btn'>&gt;&gt;</button>
+<button class='maximize-dash-btn' title='Maximize Dashboard'>&gt;&gt;</button>
 `
 var noMaxiBtn = ``
 function dpClicked(event) {
@@ -237,9 +240,9 @@ function maximizeDash(event) {
     document.getElementsByClassName('user')[0].classList.remove('dash-change-1')
     document.getElementsByClassName('links')[0].classList.remove('dash-change-1')
     document.getElementsByClassName('dashboard')[0].classList.remove('dash-change')
-    document
-      .getElementsByClassName("dashboard")[0]
-      .classList.remove("powered-on");
+
+    document.getElementsByClassName('dashboard')[0].classList.remove('powered-on')
+
     document.getElementsByClassName('dashboard')[0].innerHTML = noMaxiBtn
 
     document.getElementsByClassName('user')[0].classList.add('dash-change-3')
@@ -404,4 +407,51 @@ function showProjectsAssembly(event) {
     // projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
     // console.log()
     document.getElementsByClassName('projects-btn')[0].parentElement.classList.add('btn-highlighted')
+}
+
+
+var ref1 = `
+<div class='ref-details project-card'>
+    <h3>From: Kester Smith</h3>
+    <h3>At: ICIS (LexisNexis Risk Solutions Group)</h3>
+    <a href='#' class='ref-view readmore'>View</a>
+</div>`
+
+var ref2 = `
+<div class='ref-details project-card'>
+    <h3>From: Mr. Nobody&nbsp; &nbsp; &nbsp; &nbsp; </h3>
+    <h3>At: BlankCorp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </h3>
+    <a href='#' class='ref-view readmore'>View</a>
+</div>`
+
+var allRefs = `
+<div class='all-refs'>
+    <a href='#' class='refs-back-btn readmore'>Back</a>
+    <div class='all-projects-view'>
+    ${ref1}
+    ${ref2}
+    </div>
+</div>
+`
+function refsClicked(event) {
+    clearContentPane()
+    var newContentPane = `
+    <div class='sub-content cv-title'>
+        <h1>References</h1>
+    </div>
+    <div class='sub-content cv-content'>
+        ${allRefs}
+    </div>`
+    var contentPane = document.getElementsByClassName('content')[0]
+    contentPane.innerHTML = newContentPane
+    document.getElementsByClassName('cv-btn')[0].parentElement.classList.add('btn-highlighted')
+
+    document.getElementsByClassName('refs-back-btn')[0].addEventListener('click', cvClicked)
+
+    cvSection = `
+    <embed src='icis_reference.pdf' type='application/pdf' class='cv-container'/>
+    <button class='refs-btn readmore'>References</button>`
+    document.getElementsByClassName('ref-view')[0].addEventListener('click', cvClicked)
 }
