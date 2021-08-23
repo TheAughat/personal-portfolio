@@ -469,7 +469,7 @@ function singleRefClicked(event) {
     clearContentPane()
     var newContentPane = `
     <div class='sub-content cv-title'>
-        <h1>Resume</h1>
+        <h1>References</h1>
     </div>
     <div class='sub-content cv-content'>
         ${refsSection}
