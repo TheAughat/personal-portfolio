@@ -49,68 +49,88 @@ function aboutClicked(event) {
 
 
 var slideshow = `
-<div class='slider'>
-<div class='slides'>
-    <input type='radio' name='radio-btn' id='radio1'>
-    <input type='radio' name='radio-btn' id='radio2'>
-    <input type='radio' name='radio-btn' id='radio3'>
-    <input type='radio' name='radio-btn' id='radio4'>
-    <div class='slide first'>
-        <img class='slide-image' src='images/1.jpg' alt=''>
+<div class='carousel'>
+    
+
+    <div class='carousel__track-container'>
+        <button class='carousel__button carousel__button--left'>&lt;</button>
+        <ul class='carousel__track moving'>
+            <li class='carousel__slide current-slide'>
+                <img class='carousel__image' src='images/1.jpg' alt=''>
+            </li>
+            <li class='carousel__slide'>
+                <img class='carousel__image' src='images/2.jpg' alt=''>
+            </li>
+            <li class='carousel__slide'>
+                <img class='carousel__image' src='images/3.jpg' alt=''>
+            </li>
+            <li class='carousel__slide'>
+                <img class='carousel__image' src='images/4.jpg' alt=''>
+            </li>
+        </ul>
+        <button class='carousel__button carousel__button--right'>&gt;</button>
     </div>
-    <div class='slide'>
-        <img class='slide-image' src='images/2.jpg' alt=''>
-    </div>
-    <div class='slide'>
-        <img class='slide-image' src='images/3.jpg' alt=''>
-    </div>
-    <div class='slide'>
-        <img class='slide-image' src='images/4.jpg' alt=''>
-    </div>
-    <div class='navigation-auto'>
-        <div class='auto-btn1'></div>
-        <div class='auto-btn2'></div>
-        <div class='auto-btn3'></div>
-        <div class='auto-btn4'></div>
+
+    
+
+    <div class='carousel__nav'>
+        <button class='carousel__indicator current-slide'></button>
+        <button class='carousel__indicator'></button>
+        <button class='carousel__indicator'></button>
+        <button class='carousel__indicator'></button>
     </div>
 </div>
-<div class='navigation-manual'>
-    <label for='radio1' class='manual-btn'></label>
-    <label for='radio2' class='manual-btn'></label>
-    <label for='radio3' class='manual-btn'></label>
-    <label for='radio4' class='manual-btn'></label>
-</div>
-</div>
-<a href='#' class='readmore view-project-assembly'>View All</a>
-<script type='text/javascript'>
-var counter = 1
-setInterval(function() {
-document.getElementById('radio' + counter).checked = true;
-counter++;
-if (counter > 4) {
-    counter = 1;
-}
-}, 5000);
-</script>`
+<a href='#' class='readmore view-project-assembly'>View All</a>`
 function projectsClicked(event) {
     console.log('projects clicked!')
-    clearContentPane()
-    var newContentPane = `
-    <div class='sub-content projects-title'>
-        <h1>Projects</h1>
-    </div>
-    <div class='sub-content projects-content'>
-        ${slideshow}
-    </div>`
-    var contentPane = document.getElementsByClassName('content')[0]
-    contentPane.innerHTML = newContentPane
-    // console.log(contentPane.children)
-    var projectsElement = event.target
-    projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
-    // console.log()
+    if (document.querySelector('.carousel') == null) {
+        clearContentPane()
+        var newContentPane = `
+        <div class='sub-content projects-title'>
+            <h1>Projects</h1>
+        </div>
+        <div class='sub-content projects-content'>
+            ${slideshow}
+        </div>`
+        var contentPane = document.getElementsByClassName('content')[0]
+        contentPane.innerHTML = newContentPane
+        // console.log(contentPane.children)
+        var projectsElement = event.target
+        projectsElement.parentElement.parentElement.classList.add('btn-highlighted')
+        // console.log()
 
-    var viewProjectsAssemblyBtn = document.getElementsByClassName('view-project-assembly')[0]
-    viewProjectsAssemblyBtn.addEventListener('click', showProjectsAssembly)
+        var viewProjectsAssemblyBtn = document.getElementsByClassName('view-project-assembly')[0]
+        viewProjectsAssemblyBtn.addEventListener('click', showProjectsAssembly)
+        // console.log(document.getElementsByTagName("head")[0].lastChild.classList === undefined);
+        if (document.getElementsByTagName("head")[0].lastChild.classList === undefined){
+            load_js();
+        }
+    }
+
+}
+
+function load_js()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'carousel2.js';
+    script_element.classList.add('carousel2-class');
+    head_ID.appendChild(script_element);
+    // console.log(head_ID.lastChild.src)
+}
+
+function unload_js()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0];
+    console.log(head_ID.childNodes)
+    head_ID.removeChild(head_ID.lastChild);
+    console.log(head_ID.childNodes)
 }
 
 
@@ -139,6 +159,7 @@ var githubCard = `
     </div>
 </div>`
 function contactClicked(event) {
+    unload_js();
     console.log('contact clicked!')
     clearContentPane()
     var newContentPane = `
@@ -322,6 +343,10 @@ function recordWhereabouts() {
 
 
 function clearContentPane() {
+    if (document.getElementsByTagName("head")[0].lastChild.classList !== undefined){
+        unload_js();
+    }
+    
     document.getElementsByClassName('btn-highlighted')[0].classList.remove('btn-highlighted')
     var contentPane = document.getElementsByClassName('sub-content')
     lenConPane = contentPane.length
