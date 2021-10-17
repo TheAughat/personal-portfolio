@@ -56,13 +56,19 @@ var slideshow = `
         <button class='carousel__button carousel__button--left'>&lt;</button>
         <ul class='carousel__track moving'>
             <li class='carousel__slide current-slide'>
-                <img class='carousel__image' src='images/1.jpg' alt=''>
+                <a href='https://github.com/TheAughat/Battleship' target='_blank'>
+                    <img class='carousel__image' src='images/1.jpg' alt=''>
+                </a>
             </li>
             <li class='carousel__slide'>
-                <img class='carousel__image' src='images/2.jpg' alt=''>
+                <a href='https://github.com/TheAughat/GridRotationGame' target='_blank'>
+                    <img class='carousel__image' src='images/2.jpg' alt=''>
+                </a>
             </li>
             <li class='carousel__slide'>
-                <img class='carousel__image' src='images/3.jpg' alt=''>
+                <a href='https://github.com/TheAughat/Stopwatch' target='_blank'>
+                    <img class='carousel__image' src='images/3.jpg' alt=''>
+                </a>
             </li>
             <li class='carousel__slide'>
                 <img class='carousel__image' src='images/4.jpg' alt=''>
@@ -359,9 +365,9 @@ function clearContentPane() {
 var projectOneDetails = `
 <div class='project-card'>
     <div class='project-card-content'>
-        <h2>Project One</h2>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-        <a href='#' class='readmore'>Explore</a>
+        <h2>Battleship</h2>
+        <h3>This game allows the user to play a simple version of the popular board game battleship.<br>Written in Java.<br>Created as a first-year project during University.</h3>
+        <a href='https://github.com/TheAughat/Battleship' class='readmore' target='_blank'>Explore</a>
     </div>
     <h1>01</h1>
 </div>`
@@ -369,9 +375,10 @@ var projectOneDetails = `
 var projectTwoDetails = `
 <div class='project-card'>
     <div class='project-card-content'>
-        <h2>Project Two</h2>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-        <a href='#' class='readmore'>Explore</a>
+        <h2>Grid Rotation Puzzle</h2>
+        <h3>Allows the user to play a simple rotating tile game where they are given a scrambled image that is broken into a grid and they must rotate each tile correctly
+        to reform the image.<br>Written in Java.</h3>
+        <a href='https://github.com/TheAughat/GridRotationGame' class='readmore' target='_blank'>Explore</a>
     </div>
     <h1>02</h1>
 </div>`
@@ -379,9 +386,9 @@ var projectTwoDetails = `
 var projectThreeDetails = `
 <div class='project-card'>
     <div class='project-card-content'>
-        <h2>Project Three</h2>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-        <a href='#' class='readmore'>Explore</a>
+        <h2>Simple Stopwatch</h2>
+        <h3>A simple stopwatch GUI with three buttons: Start, Pause, and Reset.<br>Written in Java.</h3>
+        <a href='https://github.com/TheAughat/Stopwatch' class='readmore' target='_blank'>Explore</a>
     </div>
     <h1>03</h1>
 </div>`
@@ -457,7 +464,6 @@ var allRefs = `
     <a href='#' class='refs-back-btn readmore'>Back</a>
     <div class='all-projects-view'>
     ${ref1}
-    ${ref2}
     </div>
 </div>
 `
