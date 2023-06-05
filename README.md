@@ -1,2 +1,2 @@
-# Personal-Portfolio
-A personal portfolio website containing projects I have undertaken.
+# personal-portfolio-react
+My personal portfolio website made using React.

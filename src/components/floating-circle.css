@@ -1,0 +1,14 @@
+.floating-circle {
+    background: linear-gradient(to bottom right, rgba(8, 107, 255, 0.486), rgba(8, 255, 243, 0.486));
+    animation: animate-circles 10s linear infinite;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes animate-circles {
+    0%, 100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+}
