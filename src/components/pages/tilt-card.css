@@ -1,0 +1,11 @@
+.tilt-card {
+    width: 18em;
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    margin-right: 2.5em;
+    margin-bottom: 3em;
+}
