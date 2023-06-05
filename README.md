@@ -1,2 +1,2 @@
-# personal-portfolio-react
+# personal-portfolio
 My personal portfolio website made using React.
