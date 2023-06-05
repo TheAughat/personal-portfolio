@@ -1,6 +1,6 @@
 {
-  "homepage": "https://theaughat.github.io/personal-portfolio-react",
-  "name": "personal-portfolio-react",
+  "homepage": "https://theaughat.github.io/Personal-Portfolio",
+  "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
