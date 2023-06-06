@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Personal-Portfolio/static/css/main.ddf0fc11.css",
-    "main.js": "/Personal-Portfolio/static/js/main.307dd7b6.js",
-    "static/js/787.91619046.chunk.js": "/Personal-Portfolio/static/js/787.91619046.chunk.js",
-    "static/media/DanielICISReference.pdf": "/Personal-Portfolio/static/media/DanielICISReference.443d36218ec364af052a.pdf",
-    "static/media/battleship_ubisoft.jpg": "/Personal-Portfolio/static/media/battleship_ubisoft.c1af2534f198ccc4896f.jpg",
-    "static/media/codewalker_image.jpg": "/Personal-Portfolio/static/media/codewalker_image.c24e754f8bdf2a61616e.jpg",
-    "static/media/portfolio_image.JPG": "/Personal-Portfolio/static/media/portfolio_image.3c52c5831e4f7c86d143.JPG",
-    "static/media/gridgames_image.JPG": "/Personal-Portfolio/static/media/gridgames_image.c51ad7044fa1eeef66dd.JPG",
-    "static/media/DanielCV.pdf": "/Personal-Portfolio/static/media/DanielCV.8da77bcc7440000edf34.pdf",
-    "static/media/email_logo.png": "/Personal-Portfolio/static/media/email_logo.1572c40e9a0fc2ee86a4.png",
-    "index.html": "/Personal-Portfolio/index.html",
-    "main.ddf0fc11.css.map": "/Personal-Portfolio/static/css/main.ddf0fc11.css.map",
-    "main.307dd7b6.js.map": "/Personal-Portfolio/static/js/main.307dd7b6.js.map",
-    "787.91619046.chunk.js.map": "/Personal-Portfolio/static/js/787.91619046.chunk.js.map"
+    "main.css": "/personal-portfolio/static/css/main.ddf0fc11.css",
+    "main.js": "/personal-portfolio/static/js/main.f034f485.js",
+    "static/js/787.91619046.chunk.js": "/personal-portfolio/static/js/787.91619046.chunk.js",
+    "static/media/DanielICISReference.pdf": "/personal-portfolio/static/media/DanielICISReference.443d36218ec364af052a.pdf",
+    "static/media/battleship_ubisoft.jpg": "/personal-portfolio/static/media/battleship_ubisoft.c1af2534f198ccc4896f.jpg",
+    "static/media/codewalker_image.jpg": "/personal-portfolio/static/media/codewalker_image.c24e754f8bdf2a61616e.jpg",
+    "static/media/portfolio_image.JPG": "/personal-portfolio/static/media/portfolio_image.3c52c5831e4f7c86d143.JPG",
+    "static/media/gridgames_image.JPG": "/personal-portfolio/static/media/gridgames_image.c51ad7044fa1eeef66dd.JPG",
+    "static/media/DanielCV.pdf": "/personal-portfolio/static/media/DanielCV.8da77bcc7440000edf34.pdf",
+    "static/media/email_logo.png": "/personal-portfolio/static/media/email_logo.1572c40e9a0fc2ee86a4.png",
+    "index.html": "/personal-portfolio/index.html",
+    "main.ddf0fc11.css.map": "/personal-portfolio/static/css/main.ddf0fc11.css.map",
+    "main.f034f485.js.map": "/personal-portfolio/static/js/main.f034f485.js.map",
+    "787.91619046.chunk.js.map": "/personal-portfolio/static/js/787.91619046.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ddf0fc11.css",
-    "static/js/main.307dd7b6.js"
+    "static/js/main.f034f485.js"
   ]
 }
