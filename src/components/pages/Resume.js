@@ -182,7 +182,9 @@ function Resume() {
 
     return (
         <Stack direction='column' spacing={3} display='flex' alignItems='stretch' justifyContent='flex-start'>
-            <Typography sx={{...commonSx, color: defaultTheme.palette.primary.light}} variant='h4'>Resume</Typography>
+            <Typography sx={{...commonSx, color: defaultTheme.palette.primary.light}} variant='h4'>
+                {viewing === 'resume'? 'Resume' : 'References'}
+            </Typography>
 
             {renderBody()}
 
