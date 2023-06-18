@@ -39,11 +39,11 @@ function About() {
         "I'm keen to learn new tools and technologies, and love working with anything at the heart of computer " + 
         "science. I'm looking forward to the technological singularity and hope to play a part in bringing it " +
         "about safely and responsibly.",
-        "I attend Brunel University in London, and am currently working as a Software Developer placement intern " +
-        "at Nomura International Plc. Additionally, I also have experience working as a Data Science intern at ICIS " +
+        "I attend Brunel University in London, and have one year of experience working as a Software Engineering placement intern " +
+        "at Nomura International Plc. Additionally, I also have two months of experience working as a Data Science intern at ICIS " +
         "(part of LexisNexis Risk Solutions Group).",
-        "My hobbies include reading science-fiction novels, digital illustration, and following the latest trends in " +
-        "sci-tech, AI research, futurism, and space exploration.",
+        "My hobbies include reading science-fiction novels, digital illustration, games development, and following the latest trends in " +
+        "sci-tech, AI & physics research, futurism, and space exploration.",
     ];
 
     const keySkills = [
