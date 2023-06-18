@@ -4,6 +4,7 @@ import UtilityButton from "../buttons/UtilityButton";
 import { defaultTheme } from "../../utils/Theme";
 import myCV from '../../utils/documents/DanielCV.pdf';
 import kesterRef from '../../utils/documents/DanielICISReference.pdf';
+import nomHrRef from '../../utils/documents/DanielNomuraHRReference.pdf';
 import { DataGrid } from '@mui/x-data-grid';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Type } from "./About";
@@ -31,6 +32,13 @@ function Resume() {
             position: 'Senior Data Scientist', 
             company: 'ICIS (LexisNexis RSG)',
         },
+        {
+            id: 'hr-nomura',
+            name: 'Izzie & Ayesha',
+            relation: 'HR Supervisors',
+            position: 'HR Graduate Recruitment',
+            company: 'Nomura International Plc',
+        },
         // {
         //     id: 'lokendra-nom',
         //     name: 'Lokendra Tomar',
@@ -38,13 +46,6 @@ function Resume() {
         //     position: 'Technical Lead',
         //     company: 'Nomura International Plc',
         // },
-        // {
-        //     id: 'wajida-nom',
-        //     name: 'Wajida Khan',
-        //     relation: 'Line Manager',
-        //     position: 'Vice President | Manager',
-        //     company: 'Nomura International Plc'
-        // }
     ];
 
     const commonSx = {
@@ -142,6 +143,9 @@ function Resume() {
         switch (refToRender) {
             case 'kester-icis':
                 doc = kesterRef;
+                break;
+            case 'hr-nomura':
+                doc = nomHrRef;
                 break;
             default:
                 break;

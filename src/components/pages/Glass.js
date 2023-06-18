@@ -1,4 +1,5 @@
-import { Dialog, DialogContent, Box } from '@mui/material';
+import { Dialog, DialogContent, Box, IconButton, Stack } from '@mui/material';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import React from 'react';
 import MenuDrawer from './MenuDrawer';
 import About from './About';
@@ -9,6 +10,8 @@ import Projects from './Projects';
 
 function Glass() {
     const [selected, setSelected] = React.useState('about');
+    const [shutdown, setShutdown] = React.useState(false);
+
 
     function renderContentPane() {
         switch (selected) {
@@ -26,6 +29,12 @@ function Glass() {
     }
 
 
+    const shutdownStyles = shutdown? {
+        opacity: 0,
+        pointerEvents: 'none',
+    } : {};
+
+
     return (
         <Dialog
             open={true}
@@ -34,7 +43,7 @@ function Glass() {
             hideBackdrop
             PaperProps={{
                 sx: {
-                    background: 'rgba(255,255,255,0.6)',
+                    background: 'rgba(255,255,255,0.5)',
                     opacity: 0.75,
                     // boxShadow: 'none',
                     borderRadius: '10px',
@@ -43,7 +52,22 @@ function Glass() {
                 }
             }}
         >
-            <DialogContent>
+            <Stack direction='row' justifyContent='flex-end' sx={{position: 'absolute', top: 20, right: 20}}>
+                <IconButton
+                    sx={{
+                        color: 'cornflowerblue',
+                        transition: '0.4s ease-in-out',
+                        zIndex: 5000,
+                        '&:hover': {
+                            color: 'red',
+                        },
+                    }}
+                    onClick={() => setShutdown(current => !current)}
+                >
+                    <PowerSettingsNewIcon/>
+                </IconButton>
+            </Stack>
+            <DialogContent sx={{...shutdownStyles, transition: '0.7s ease-in-out'}}>
                 <MenuDrawer 
                     selected={selected} 
                     setSelected={setSelected}

@@ -157,7 +157,7 @@ function MenuDrawer({selected, setSelected, contentComponent}) {
                 PaperProps={{
                     style: {
                         position: "absolute",
-                        background: 'rgba(255,255,255,0.6)',
+                        background: 'rgba(255,255,255,0.4)',
                         opacity: 0.95,
                     }
                 }}
