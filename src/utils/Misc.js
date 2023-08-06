@@ -1,1 +1,1 @@
-export const linkedinDpUrl = "https://media.licdn.com/dms/image/D4E03AQHcloUgUIM60A/profile-displayphoto-shrink_800_800/0/1674667924913?e=1691020800&v=beta&t=QoY4e2TA-eyO5kdEG6zxPbGktBBj5-nPo4t3-MDvYBc";
+export const linkedinDpUrl = "https://media.licdn.com/dms/image/D4E03AQHcloUgUIM60A/profile-displayphoto-shrink_800_800/0/1674667924913?e=1697068800&v=beta&t=-LlM5QRuD4C59ktmLU-odar8ZmMfDg5RzmAJwy7juHs";
