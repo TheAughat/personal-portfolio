@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.ddf0fc11.css",
-    "main.js": "/personal-portfolio/static/js/main.1d8975bb.js",
+    "main.js": "/personal-portfolio/static/js/main.22d991b9.js",
     "static/js/787.91619046.chunk.js": "/personal-portfolio/static/js/787.91619046.chunk.js",
     "static/media/DanielICISReference.pdf": "/personal-portfolio/static/media/DanielICISReference.443d36218ec364af052a.pdf",
     "static/media/battleship_ubisoft.jpg": "/personal-portfolio/static/media/battleship_ubisoft.c1af2534f198ccc4896f.jpg",
@@ -9,15 +9,15 @@
     "static/media/DanielNomuraHRReference.pdf": "/personal-portfolio/static/media/DanielNomuraHRReference.24e60cb648df9a0b2a08.pdf",
     "static/media/portfolio_image.JPG": "/personal-portfolio/static/media/portfolio_image.3c52c5831e4f7c86d143.JPG",
     "static/media/gridgames_image.JPG": "/personal-portfolio/static/media/gridgames_image.c51ad7044fa1eeef66dd.JPG",
-    "static/media/DanielCV.pdf": "/personal-portfolio/static/media/DanielCV.8da77bcc7440000edf34.pdf",
+    "static/media/DanielCV.pdf": "/personal-portfolio/static/media/DanielCV.5bdf03af020c136ece3a.pdf",
     "static/media/email_logo.png": "/personal-portfolio/static/media/email_logo.1572c40e9a0fc2ee86a4.png",
     "index.html": "/personal-portfolio/index.html",
     "main.ddf0fc11.css.map": "/personal-portfolio/static/css/main.ddf0fc11.css.map",
-    "main.1d8975bb.js.map": "/personal-portfolio/static/js/main.1d8975bb.js.map",
+    "main.22d991b9.js.map": "/personal-portfolio/static/js/main.22d991b9.js.map",
     "787.91619046.chunk.js.map": "/personal-portfolio/static/js/787.91619046.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ddf0fc11.css",
-    "static/js/main.1d8975bb.js"
+    "static/js/main.22d991b9.js"
   ]
 }
