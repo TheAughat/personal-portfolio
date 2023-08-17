@@ -34,7 +34,7 @@ function About() {
 
     const sentences = [
         "Hello there!",
-        "I'm a third-year Computer Science student who's greatly interested in the future of software and AI " +
+        "I'm a final-year Computer Science student who's greatly interested in the future of software and AI " +
         "and how they continue to develop and evolve with time.",
         "I'm keen to learn new tools and technologies, and love working with anything at the heart of computer " + 
         "science. I'm looking forward to the technological singularity and hope to play a part in bringing it " +

@@ -197,7 +197,7 @@ function MenuDrawer({selected, setSelected, contentComponent}) {
                         opacity: open? 1 : 0,
                     }}>
                         <small>
-                            CompSci Student | Software Engineer Intern
+                            Final-Year Computer Science Student
                         </small>
                     </Typography>
                 </Box>
