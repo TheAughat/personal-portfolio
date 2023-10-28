@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Box, List, CssBaseline, Typography, IconButton, ListItem, ListItemButton, ListItemIcon,
     ListItemText } from '@mui/material';
 import MuiDrawer from '@mui/material/Drawer';
-import {linkedinDpUrl} from '../../utils/Misc';
+import profilePicture from '../../utils/images/profile-picture.jpg';
 import { ChevronLeft, ChevronRight, Code, Info, AccountCircle, Description } from '@mui/icons-material';
 import { defaultTheme } from '../../utils/Theme';
 
@@ -180,7 +180,7 @@ function MenuDrawer({selected, setSelected, contentComponent}) {
                             opacity: open? 1 : 0,
                         }}
                         alt="Display Photograph."
-                        src={linkedinDpUrl}
+                        src={profilePicture}
                     />
                     <Typography color='primary.dark' sx={{
                         transition: '0.8s ease-in-out',
