@@ -34,22 +34,22 @@ function About() {
 
     const sentences = [
         "Hello there!",
-        "I'm a final-year Computer Science student who's greatly interested in the future of software and AI " +
+        "I'm a Computer Science graduate who's greatly interested in the future of AI and software " +
         "and how they continue to develop and evolve with time.",
+        "I graduated from Brunel University at the top of my class with a 98% GPA.",
         "I'm keen to learn new tools and technologies, and love working with anything at the heart of computer " + 
         "science. I'm looking forward to the technological singularity and hope to play a part in bringing it " +
         "about safely and responsibly.",
-        "I attend Brunel University in London, and have one year of experience working as a Software Engineering placement intern " +
-        "at Nomura International Plc. Additionally, I also have two months of experience working as a Data Science intern at ICIS " +
-        "(part of LexisNexis Risk Solutions Group).",
+        "I currently work as a Software Engineer at Nomura International plc in London, and have considerable internship experience " +
+        "under my belt.",
         "My hobbies include reading science-fiction novels, digital illustration, games development, and following the latest trends in " +
-        "sci-tech, AI & physics research, futurism, and space exploration.",
+        "sci-tech spheres like AI & physics research, BCIs, fusion, gene editing, transhumanism, and space exploration.",
     ];
 
     const keySkills = [
-        {prefix: 'Languages & Scripting: ', body: 'JavaScript, Java, Python, HTML & CSS, Shell/Bash.'},
-        {prefix: 'Libraries & Frameworks: ', body: 'React, Java Spring, NodeJS, Express.js, Cypress, Jest, Material-UI.'},
-        {prefix: 'Software & Tools: ', body: 'Git, CI/CD (Jenkins), Containerization (Docker, Podman), MySQL, Microservices, Micro-Frontends, Jupyter Notebook & Google Colab.'},
+        {prefix: 'Languages & Scripting: ', body: 'Java, JavaScript, Python, C++, HTML & CSS, Shell/Bash.'},
+        {prefix: 'Libraries & Frameworks: ', body: 'React, Java Spring, NodeJS, Express.js, Jest, Material-UI, Sklearn, Pandas.'},
+        {prefix: 'Software & Tools: ', body: 'SQL, Git, CI/CD (Jenkins, Kubernetes, GitLab CI), Containerization (Docker, Podman), Microservices, Micro-Frontends, Helm Charts, Jupyter Notebook & Google Colab.'},
         {prefix: 'Soft skills: ', body: 'Problem solving, Teamwork, Leadership, Attention to detail, Time management & task prioritization.'},
     ];
 

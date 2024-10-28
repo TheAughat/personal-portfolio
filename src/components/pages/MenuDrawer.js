@@ -197,7 +197,7 @@ function MenuDrawer({selected, setSelected, contentComponent}) {
                         opacity: open? 1 : 0,
                     }}>
                         <small>
-                            Final-Year Computer Science Student
+                            Software Engineer Analyst @ Nomura
                         </small>
                     </Typography>
                 </Box>
