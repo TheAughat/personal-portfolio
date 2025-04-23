@@ -8,11 +8,11 @@ function DesktopLayout() {
     document.body.classList.add('main-bg-coloring');
 
     const circleParams = [
-        {top: '35%', left: '5%', diameter: '220px'},
-        {bottom: '25%', right: '6%', diameter: '80px'},
-        {bottom: '6%', right: '45%', diameter: '250px'},
-        {top: '3%', left: '33%', diameter: '160px'},
-        {top: '5%', right: '12%', diameter: '400px'},
+        {top: '35%', left: '5%', diameter: '220px', planetName: 'neptune'},
+        {bottom: '25%', right: '6%', diameter: '80px', planetName: 'luna'},
+        {bottom: '6%', right: '45%', diameter: '250px', planetName: 'mars'},
+        {top: '3%', left: '33%', diameter: '160px', planetName: 'mercury'},
+        {top: '5%', right: '12%', diameter: '400px', planetName: 'jupiter'}
     ];
 
 

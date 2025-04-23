@@ -1,9 +1,13 @@
 import React from 'react';
 import DesktopLayout from './DesktopLayout';
+import './space-bg.css';
 
 function LandingBackground() {
     return (
-        <DesktopLayout/>
+        <>
+            <DesktopLayout/>
+            <div className='space-bg' style={{zIndex: -1}}/>
+        </>
     );
 }
 

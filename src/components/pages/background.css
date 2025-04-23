@@ -2,7 +2,7 @@
     min-height: 100vh;
     max-height: max-content;
     background: linear-gradient(to left top, #0fffd3, #09dafa);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.910);
     background-blend-mode: multiply;
     display: flex;
     align-items: center;
