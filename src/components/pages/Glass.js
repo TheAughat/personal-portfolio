@@ -43,12 +43,14 @@ function Glass() {
             hideBackdrop
             PaperProps={{
                 sx: {
-                    background: 'rgba(255,255,255,0.5)',
+                    // background: 'rgba(255,255,255,0.5)',
+                    background: 'rgba(175, 255, 255, 0.75)',
                     opacity: 0.75,
                     // boxShadow: 'none',
                     borderRadius: '10px',
                     height: '50em',
-                    backdropFilter: 'blur(7em)',
+                    backdropFilter: 'blur(1em)',
+                    // backdropFilter: 'blur(5px)',
                 }
             }}
         >
