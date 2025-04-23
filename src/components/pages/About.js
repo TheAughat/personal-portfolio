@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { defaultTheme } from "../../utils/Theme";
+import { langScriptImgs, libFrameImgs, softToolImgs, aiImgs } from "./skillsImages";
+import SkillTags from "./SkillTags";
 
 
 export function Type({children, ...props}) {
@@ -46,11 +48,53 @@ function About() {
         "sci-tech spheres like AI & physics research, BCIs, fusion, gene editing, transhumanism, and space exploration.",
     ];
 
-    const keySkills = [
-        {prefix: 'Languages & Scripting: ', body: 'Java, JavaScript, Python, C++, HTML & CSS, Shell/Bash.'},
-        {prefix: 'Libraries & Frameworks: ', body: 'React, Java Spring, NodeJS, Express.js, Jest, Material-UI, Sklearn, Pandas.'},
-        {prefix: 'Software & Tools: ', body: 'SQL, Git, CI/CD (Jenkins, Kubernetes, GitLab CI), Containerization (Docker, Podman), Microservices, Micro-Frontends, Helm Charts, Jupyter Notebook & Google Colab.'},
-        {prefix: 'Soft skills: ', body: 'Problem solving, Teamwork, Leadership, Attention to detail, Time management & task prioritization.'},
+    // const keySkills = [
+    //     {prefix: 'Languages & Scripting: ', body: 'Java, JavaScript, Python, C++, HTML & CSS, Shell/Bash.'},
+    //     {prefix: 'Libraries & Frameworks: ', body: 'React, Java Spring, NodeJS, Express.js, Jest, Material-UI, Sklearn, Pandas.'},
+    //     {prefix: 'Software & Tools: ', body: 'SQL, Git, CI/CD (Jenkins, Kubernetes, GitLab CI), Containerization (Docker, Podman), Microservices, Micro-Frontends, Helm Charts, Jupyter Notebook & Google Colab.'},
+    //     {prefix: 'Soft skills: ', body: 'Problem solving, Teamwork, Leadership, Attention to detail, Time management & task prioritization.'},
+    // ];
+
+    const langScripts = [
+        {name: 'Java', imgPath: langScriptImgs.javaImg},
+        {name: 'JavaScript', imgPath: langScriptImgs.jsImg},
+        {name: 'Python', imgPath: langScriptImgs.pythonImg},
+        {name: 'C++', imgPath: langScriptImgs.cppImg},
+        {name: 'HTML', imgPath: langScriptImgs.htmlImg},
+        {name: 'CSS', imgPath: langScriptImgs.cssImg},
+        {name: 'Shell/Bash', imgPath: langScriptImgs.terminalImg}
+    ];
+
+    const libFrames = [
+        {name: 'React', imgPath: libFrameImgs.reactImg},
+        {name: 'SpringBoot', imgPath: libFrameImgs.springImg},
+        {name: 'NodeJS', imgPath: libFrameImgs.nodejsImg},
+        {name: 'ExpressJS', imgPath: libFrameImgs.expImg},
+        {name: 'Material-UI', imgPath: libFrameImgs.muiImg},
+        {name: 'Scikit-Learn', imgPath: libFrameImgs.sklearnImg},
+        {name: 'Pandas', imgPath: libFrameImgs.pandasImg},
+    ];
+
+    const softTools = [
+        {name: 'SQL', imgPath: softToolImgs.sqlImg},
+        {name: 'MySQL', imgPath: softToolImgs.mysqlImg},
+        {name: 'git', imgPath: softToolImgs.gitImg},
+        {name: 'GitHub', imgPath: softToolImgs.githubImg},
+        {name: 'CI/CD', imgPath: softToolImgs.cicdImg},
+        {name: 'Jenkins', imgPath: softToolImgs.jenkinsImg},
+        {name: 'Docker', imgPath: softToolImgs.dockerImg},
+        {name: 'Microservices', imgPath: softToolImgs.msvcImg},
+        {name: 'Microfrontends', imgPath: softToolImgs.mfesImg}
+    ];
+
+    const aiSkills = [
+        {name: 'Jupyter NB', imgPath: aiImgs.jupyterImg},
+        {name: 'Google Colab', imgPath: aiImgs.colabImg},
+        {name: 'LLMs', imgPath: aiImgs.openaiImg},
+        {name: 'LangChain', imgPath: aiImgs.langchainImg},
+        {name: 'LangGraph', imgPath: aiImgs.langgraphImg},
+        {name: 'RAG', imgPath: aiImgs.ragImg},
+        {name: 'ChromaDB', imgPath: aiImgs.chromadbImg}
     ];
 
 
@@ -61,12 +105,17 @@ function About() {
 
                 {sentences.map((sentence, idx) => <Type key={`about-sentence-${idx}`}>{sentence}</Type>)}
 
-                <Stack>
+                <Type>Key skills:</Type>
+                {/* <Stack>
                     <Type>Key skills:</Type>
                     {keySkills.map((skill, idx) => {
                         return (<Type2 prefix={skill.prefix} key={`about-skills-${idx}`}>{skill.body}</Type2>);
                     })}
-                </Stack>
+                </Stack> */}
+                {<SkillTags skills={langScripts}/>}
+                {<SkillTags skills={libFrames}/>}
+                {<SkillTags skills={softTools}/>}
+                {<SkillTags skills={aiSkills}/>}
             </Stack>
         </Box>
     );
