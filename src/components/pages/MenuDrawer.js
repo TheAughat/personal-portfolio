@@ -197,7 +197,7 @@ function MenuDrawer({selected, setSelected, contentComponent}) {
                         opacity: open? 1 : 0,
                     }}>
                         <small>
-                            Software Engineer Analyst @ Nomura
+                            MPhil AI Research @ University of Cambridge
                         </small>
                     </Typography>
                 </Box>
