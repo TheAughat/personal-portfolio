@@ -4,7 +4,8 @@ import UtilityButton from "../buttons/UtilityButton";
 import { defaultTheme } from "../../utils/Theme";
 import myCV from '../../utils/documents/DanielCV.pdf';
 import kesterRef from '../../utils/documents/DanielICISReference.pdf';
-import nomHrRef from '../../utils/documents/DanielNomuraHRReference.pdf';
+import nomHrRefPlacement from '../../utils/documents/DanielNomuraHRReferencePlacement.pdf';
+import nomHrRefGrad from '../../utils/documents/DanielNomuraHRReferenceGrad.pdf';
 import { DataGrid } from '@mui/x-data-grid';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Type } from "./About";
@@ -33,11 +34,18 @@ function Resume() {
             company: 'ICIS (LexisNexis RSG)',
         },
         {
-            id: 'hr-nomura',
+            id: 'hr-nomura-placement',
             name: 'Izzie & Ayesha',
             relation: 'HR Supervisors',
             position: 'HR Graduate Recruitment',
-            company: 'Nomura International Plc',
+            company: 'Nomura International plc',
+        },
+        {
+            id: 'hr-nomura-grad',
+            name: 'Nomura EMEA HR',
+            relation: 'HR Department',
+            position: 'HR General',
+            company: 'Nomura International plc'
         },
         // {
         //     id: 'lokendra-nom',
@@ -144,8 +152,11 @@ function Resume() {
             case 'kester-icis':
                 doc = kesterRef;
                 break;
-            case 'hr-nomura':
-                doc = nomHrRef;
+            case 'hr-nomura-placement':
+                doc = nomHrRefPlacement;
+                break;
+            case 'hr-nomura-grad':
+                doc = nomHrRefGrad;
                 break;
             default:
                 break;
