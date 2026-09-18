@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.7abb4789.css",
-    "main.js": "/personal-portfolio/static/js/main.0b9465b0.js",
+    "main.js": "/personal-portfolio/static/js/main.040ddd41.js",
     "static/js/787.91619046.chunk.js": "/personal-portfolio/static/js/787.91619046.chunk.js",
     "static/media/DanielICISReference.pdf": "/personal-portfolio/static/media/DanielICISReference.443d36218ec364af052a.pdf",
     "static/media/battleship_ubisoft.jpg": "/personal-portfolio/static/media/battleship_ubisoft.c1af2534f198ccc4896f.jpg",
@@ -9,7 +9,7 @@
     "static/media/saturn.png": "/personal-portfolio/static/media/saturn.10b9ab3dde621c4151ce.png",
     "static/media/microfrontends.png": "/personal-portfolio/static/media/microfrontends.4b1c2c9a9c30b4ddcb63.png",
     "static/media/jupiter.png": "/personal-portfolio/static/media/jupiter.ba67bf9899a706135c83.png",
-    "static/media/DanielNomuraHRReference.pdf": "/personal-portfolio/static/media/DanielNomuraHRReference.24e60cb648df9a0b2a08.pdf",
+    "static/media/DanielNomuraHRReferencePlacement.pdf": "/personal-portfolio/static/media/DanielNomuraHRReferencePlacement.24e60cb648df9a0b2a08.pdf",
     "static/media/mars.png": "/personal-portfolio/static/media/mars.f2a5754520e5ee450aa3.png",
     "static/media/portfolio_image.JPG": "/personal-portfolio/static/media/portfolio_image.3c52c5831e4f7c86d143.JPG",
     "static/media/gridgames_image.JPG": "/personal-portfolio/static/media/gridgames_image.c51ad7044fa1eeef66dd.JPG",
@@ -19,6 +19,7 @@
     "static/media/profile-picture.jpg": "/personal-portfolio/static/media/profile-picture.7a9cb34a8a5591079480.jpg",
     "static/media/rag-white-bg.png": "/personal-portfolio/static/media/rag-white-bg.9a4cdd6e3d1842dfbb27.png",
     "static/media/jenkins.png": "/personal-portfolio/static/media/jenkins.91f1e74aa1972f805ff3.png",
+    "static/media/DanielNomuraHRReferenceGrad.pdf": "/personal-portfolio/static/media/DanielNomuraHRReferenceGrad.32f5903bc02869f01035.pdf",
     "static/media/luna.png": "/personal-portfolio/static/media/luna.9d0270ea14793c2ec112.png",
     "static/media/python.png": "/personal-portfolio/static/media/python.3dd001b59695542b3566.png",
     "static/media/react.png": "/personal-portfolio/static/media/react.fc62f54bf31e35f74541.png",
@@ -48,11 +49,11 @@
     "static/media/javascript.png": "/personal-portfolio/static/media/javascript.e90bb68d1b9ccc556f91.png",
     "index.html": "/personal-portfolio/index.html",
     "main.7abb4789.css.map": "/personal-portfolio/static/css/main.7abb4789.css.map",
-    "main.0b9465b0.js.map": "/personal-portfolio/static/js/main.0b9465b0.js.map",
+    "main.040ddd41.js.map": "/personal-portfolio/static/js/main.040ddd41.js.map",
     "787.91619046.chunk.js.map": "/personal-portfolio/static/js/787.91619046.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7abb4789.css",
-    "static/js/main.0b9465b0.js"
+    "static/js/main.040ddd41.js"
   ]
 }
